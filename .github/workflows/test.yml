@@ -7,4 +7,10 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Maven Central Repository
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          server-id: ossrh
       - run: java -version
