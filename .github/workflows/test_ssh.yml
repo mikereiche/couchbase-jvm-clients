@@ -8,7 +8,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     env:
-      super_secret: ${{ secrets.SSH_PRIVATE_KEY }}
+      secrets: ${{ secrets.SSH_PRIVATE_KEY }}
     steps:
       - name: Setup SSH
         env:
