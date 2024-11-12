@@ -31,6 +31,7 @@ jobs:
       - name: build
         run: |
           ./mvnw -T12 --batch-mode -f protostellar/pom.xml clean install
-#          ./mvnw -T12 --batch-mode -f core-io-deps/pom.xml clean install
-#          ./mvnw -T12 --batch-mode -f tracing-opentelemetry-deps/pom.xml clean install
+          ./mvnw -T12 --batch-mode -f core-io-deps/pom.xml clean install
+          ./mvnw -T12 --batch-mode -f tracing-opentelemetry-deps/pom.xml clean install
+          ./mvnw -T12 nstall
       - run: echo "🍏 This job's status is ${{ job.status }}."
