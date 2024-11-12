@@ -8,11 +8,11 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     env:
-      secrets: ${{ secrets.SSH_PRIVATE_KEY }}
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
     steps:
       - name: Setup SSH
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: SHA256:BbQN9duPEhMtlV8tt8Prt9fJMxwffsfidmtnwzW7AD4
         uses: MrSquaare/ssh-setup-action@v1
         with:
           host: github.com
