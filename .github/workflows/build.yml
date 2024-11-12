@@ -33,5 +33,5 @@ jobs:
           ./mvnw -T12 --batch-mode -f protostellar/pom.xml clean install
           ./mvnw -T12 --batch-mode -f core-io-deps/pom.xml clean install
           ./mvnw -T12 --batch-mode -f tracing-opentelemetry-deps/pom.xml clean install
-          ./mvnw -T12 nstall
+          ./mvnw -T12 install
       - run: echo "🍏 This job's status is ${{ job.status }}."
