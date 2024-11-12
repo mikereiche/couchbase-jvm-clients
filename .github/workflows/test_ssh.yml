@@ -2,12 +2,13 @@ name: Test SSH
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   workflow_dispatch:
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
 jobs:
   build:
     name: Test
     runs-on: ubuntu-latest
+    env:
+      super_secret: ${{ secrets.SSH_PRIVATE_KEY }}
     steps:
       - name: Setup SSH
         env:
